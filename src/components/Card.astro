@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+
+import instalogo from "../assets/insta-logo.svg";
+
+const { text } = Astro.props;
+---
+
+<article>
+  <div class="text-box">
+    <p>{text}</p>
+  </div>
+  <div class="insta">
+    <Image class="logo" src={instalogo} alt="instagram logo" />
+    <a href="https://www.instagram.com/raadgivningenorfeus/?hl=da"
+      >raadgivningenorfeus</a
+    >
+  </div>
+</article>
+
+<style>
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 350px;
+    height: fit-content;
+  }
+
+  .text-box {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 10px;
+    background-color: #cddacf;
+  }
+
+  .insta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .logo {
+    height: 20px;
+  }
+
+  a {
+    color: #2c2e30;
+  }
+</style>

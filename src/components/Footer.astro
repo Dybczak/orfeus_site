@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+
+import logo from "../assets/logo-footer.svg";
+---
+
+<footer>
+  <div class="footer-logo">
+    <Image src={logo} alt="orfeus logo" />
+  </div>
+  <div class="info">
+    <div>
+      <p>
+        <b>Sociale Medier</b>
+        <br />
+        <a href="https://www.facebook.com/profile.php?id=61589656891665"
+          >Facebook</a
+        >
+        <br />
+        <a href="https://www.instagram.com/raadgivningenorfeus/?hl=da"
+          >Instagram</a
+        >
+      </p>
+    </div>
+    <div>
+      <p>
+        <b>Kontakt</b>
+        <br />+45 70 60 46 40
+        <br />kontakt@raadgivningen-orfeus.dk
+        <br />CVR: 46258657
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #3e4347;
+    padding: 100px;
+  }
+  p {
+    color: #cccecf;
+  }
+  a {
+    color: #cccecf;
+    font-size: 1.25rem;
+  }
+  .footer-logo {
+    display: flex;
+    align-items: center;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+</style>

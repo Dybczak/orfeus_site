@@ -1,0 +1,37 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+
+import Hero from "../components/Hero.astro";
+import Card from "../components/Card.astro";
+import BrandingSection from "../components/BrandingSection.astro";
+---
+
+<PageLayout>
+  <Hero />
+
+  <section>
+    <h2>DU GÅR MÅSKE MED TANKER SOM...</h2>
+    <div class="cards">
+      <Card />
+      <Card />
+      <Card />
+    </div>
+  </section>
+
+  <BrandingSection />
+</PageLayout>
+
+<style>
+  section {
+    padding: 10%;
+  }
+
+  .cards {
+    display: grid;
+    gap: 2rem;
+    /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+    grid-template-columns: 1fr 1fr 1fr;
+
+    padding-top: 2rem;
+  }
+</style>
