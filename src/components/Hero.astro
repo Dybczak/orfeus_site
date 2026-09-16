@@ -6,23 +6,20 @@ import harpe from "../assets/harpe-logo.svg";
 
 <section>
   <div>
-    <div>
-      <h1>NOGLE SAMTALER ER SVÆRE AT TAGE MED DEM MAN ELSKER</h1>
-    </div>
-    <div>
-      <p>
-        Når en, du holder kær, kæmper med misbrug eller afhængighed, kan det
-        være svært at vide, hvad man skal sige, eller hvem man skal sige det
-        til.
-        <br />
-        <br />
-        I Rådgivningen Orfeus står vi klar til at støtte dig som pårørende til misbrug,
-        med gratis og fortrolig rådgivning.
-      </p>
-    </div>
-    <div>
-      <button>RÆK UD TIL OS</button>
-    </div>
+    <h1>NOGLE SAMTALER ER SVÆRE AT TAGE MED DEM MAN ELSKER</h1>
+    <p>
+      Når en, du holder kær, kæmper med misbrug eller afhængighed, kan det være
+      svært at vide, hvad man skal sige, eller hvem man skal sige det til.
+      <br />
+      <br />
+      I Rådgivningen Orfeus står vi klar til at støtte dig som pårørende til misbrug,
+      med gratis og fortrolig rådgivning.
+    </p>
+    <a
+      class="button"
+      href="https://www.raadgivningen-orfeus.dk/raadgivningstelefonen/"
+      >RÆK UD TIL OS</a
+    >
   </div>
   <div>
     <Image class="harpe" src={harpe} alt="billede af en harpe" />
@@ -49,13 +46,12 @@ import harpe from "../assets/harpe-logo.svg";
   }
 
   p {
-    color: #475e4f;
     margin-top: 25px;
   }
 
-  button {
+  .button {
     font-size: 24px;
-    margin-top: 25px;
+    margin-top: 40px;
   }
 
   .harpe {

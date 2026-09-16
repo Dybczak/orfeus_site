@@ -1,0 +1,41 @@
+---
+const { headline, text, link, buttontext } = Astro.props;
+---
+
+<article>
+  <h3>{headline}</h3>
+  <p>{text}</p>
+  <a class="button" href={link}>{buttontext}</a>
+</article>
+
+<style>
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 550px;
+  }
+
+  h3 {
+    color: #354b3b;
+  }
+
+  p {
+    margin-top: 20px;
+  }
+
+  .button {
+    display: flex;
+    align-self: flex-start;
+    background-color: #628268;
+    border: 2px solid transparent;
+    margin-top: 40px;
+  }
+
+  .button:active {
+    color: #628268;
+    background-color: #fafafa;
+    text-decoration: none;
+    border: solid 2px #628268;
+  }
+</style>

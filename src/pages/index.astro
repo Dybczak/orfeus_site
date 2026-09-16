@@ -1,37 +1,103 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 
+import { Image } from "astro:assets";
+
+import krusse from "../assets/krusse.svg";
+import reel1 from "../assets/reel1.mp4";
+import reel2 from "../assets/reel2.mp4";
+
 import Hero from "../components/Hero.astro";
 import Card from "../components/Card.astro";
 import BrandingSection from "../components/BrandingSection.astro";
+import Text from "../components/Text.astro";
 ---
 
 <PageLayout>
   <Hero />
 
-  <section>
-    <h2>DU GÅR MÅSKE MED TANKER SOM...</h2>
+  <section class="quotes">
+    <div class="headline">
+      <h2>DU GÅR MÅSKE MED<br />TANKER SOM...</h2>
+      <Image src={krusse} alt="krussedulle der symboliserer tankemylder" />
+    </div>
     <div class="cards">
-      <Card />
-      <Card />
-      <Card />
+      <Card
+        text="“Jeg vil gerne hjælpe, men jeg ved ikke, hvad jeg kan gøre.”"
+      />
+      <Card text="“Han skubber mig væk, når jeg prøver at hjælpe ham”" />
+      <Card text="“Skal jeg overhovedet blande mig?”" />
     </div>
   </section>
 
   <BrandingSection />
+
+  <section>
+    <div class="indhold">
+      <div class="indhold1">
+        <Text
+          class="text"
+          headline="Kan du kende dig selv i noget af det vi deler?"
+          text="På vores sociale medier deler vi viden, perspektiver og indhold om at være pårørende til en person med misbrug eller afhængighed. Noget kan føles genkendeligt, noget kan give nye perspektiver, og noget er måske bare rart at vide."
+          link="https://www.instagram.com/raadgivningenorfeus/?hl=da"
+          buttontext="BESØG VORES INSTAGRAM"
+        />
+        <video src={reel1} controls width="200"></video>
+      </div>
+      <div class="indhold2">
+        <video src={reel2} controls height="432.586"></video>
+        <Text
+          class="text"
+          headline="Er du i tvivl om, hvordan du skal tage snakken?"
+          text="Du behøver ikke vide, hvad du skal spørge om. Vi er her for dig, og lytter til hvad du har på hjertet, og hjælper dig med at finde den rigtige vej for dig."
+          link="https://www.raadgivningen-orfeus.dk/vores-raadgivningstilbud/"
+          buttontext="TAL MED OS"
+        />
+      </div>
+    </div>
+  </section>
 </PageLayout>
 
 <style>
-  section {
-    padding: 10%;
+  .quotes {
+    padding: 100px 10% 10% 10%;
+  }
+
+  .headline {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+  }
+
+  .headline h2 {
+    color: #354b3b;
+  }
+
+  .headline img {
+    width: 150px;
+    height: auto;
   }
 
   .cards {
     display: grid;
-    gap: 2rem;
-    /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+    gap: 90px;
     grid-template-columns: 1fr 1fr 1fr;
 
-    padding-top: 2rem;
+    padding-top: 60px;
+  }
+
+  .indhold {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 100px;
+    margin-block: 100px;
+  }
+
+  .indhold1,
+  .indhold2 {
+    display: flex;
+    flex-direction: row;
+    column-gap: 100px;
   }
 </style>

@@ -8,17 +8,24 @@ body {
   background: #fff;
 }
 
-button {
+.button {
   font-family: "open-sans", sans-serif;
   font-weight: bold;
   line-height: 150%;
   color: #fafafa;
-  display: flex;
-  margin-right: auto;
   background-color: #ff7548;
-  border: none;
+  display: flex;
+  justify-self: flex-start;
+  border: 2px solid transparent;
   border-radius: 9px;
-  padding: 9px 24px;
+  padding: 7px 22px;
+}
+
+.button:active {
+  color: #ff7548;
+  background-color: #fafafa;
+  border: solid 2px #ff7548;
+  text-decoration: none;
 }
 
 p {
@@ -26,6 +33,7 @@ p {
   font-size: 1.25rem;
   line-height: 30px;
   color: #181a1b;
+  text-wrap: pretty;
 }
 
 a {
@@ -36,4 +44,14 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+h2 {
+  font-family: "lexend-deca", sans-serif;
+  font-size: 48px;
+}
+
+h3 {
+  font-family: "lexend-deca", sans-serif;
+  font-size: 36px;
 }
